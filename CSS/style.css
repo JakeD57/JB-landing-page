@@ -1,0 +1,283 @@
+/*---------*/
+/*CSS RESET*/
+/*---------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*----------*/
+/*VARIABLES*/
+/*----------*/
+
+:root {
+--black400: #070707;
+--black300: #121212;
+--black200: #494949;
+--white400: #ffffff;
+}
+
+/*---------------*/
+/*GENERAL STYLING*/
+/*---------------*/
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    color: #121212;
+    padding: 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/*----------------------*/
+/*STYLING THE NAVIGATION*/
+/*----------------------*/
+
+section.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+ul.nav__list {
+    display: flex;
+    gap: 28px;
+}
+
+a.nav__link {
+    font-size: 20px;
+    color: var(--black400);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+a.nav__link:hover {
+    opacity: 0.6;
+}
+
+section.navleft {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+section.navcontact {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+a.navcontact__email {
+    font-size: 14px;
+    color: var(--black200);
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+a.navcontact__email:hover {
+    font-size: 14px;
+    color: var(--black400);
+}
+
+a.navcontact__btn {
+    font-size: 20px;
+    color: var(--black400);
+    border: 2px solid var(--black400);
+    background: transparent;
+    padding: 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 140px;
+    transition: 0.3s ease-in-out;
+}
+
+a.navcontact__btn:hover {
+    color: var(--white400);
+    border: 2px solid var(--black400);
+    background: var(--black400);
+
+}
+
+/*----------------------*/
+/*STYLING THE HERO SECTION*/
+/*----------------------*/
+h1.hero__fluidtext {
+    font-size: clamp(40px, 13vw, 329px);
+    margin-top: 40px;
+    text-align: center;
+    line-height: 0.9;
+    margin-bottom: 40px;
+    
+}
+
+img.heroimg {
+    width: 100%;
+    height: 660px;
+    object-fit: cover;
+}
+
+section.imgcontainer::after {
+    content: "";
+    display: block;
+    background: rgb(0 0 0 / 0%) linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgb(0 0 0 / 0%) 40%, rgb(0 0 0 / 30%) 88%, rgb(0 0 0 / 30%) 100%) repeat scroll 0 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section.imgcontainer {
+    position: relative;
+}
+
+section.contentbottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    padding: 0 24px;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+}
+
+section.herocontent {
+    position: relative;
+}
+
+h2.contentbottom__heading {
+    color: #ffffff;
+    font-size: 64px;
+    max-width: 380px;
+    line-height: 1;
+    position: relative;
+}
+
+a.contentbottom__copy {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+
+
+span.contentbottom__span {
+    position: relative;
+}
+
+span.contentbottom__span::after {
+    content: url(/Images/jackson-bennett-star.svg);
+    position: absolute;
+    margin-left: 10px;
+}
+
+
+/*------------*/
+/*MEDIA QUERY*/
+/*------------*/
+
+@media (max-width: 768px) {
+    section.header__wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    h2.contentbottom__heading {
+        font-size: 32px;
+    }
+
+    a.contentbottom__copy {
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    img.heroimg {
+        height: 400px;
+    }
+
+    h1.hero__fluidtext {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+ 
+    }
+
+@media (max-width: 475px) {
+    section.navleft {
+        justify-content: center;
+    }
+
+    a.navcontact__btn {
+        height: 100%;
+        width: 100%;
+       
+    }
+
+    section.navcontact {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section.navright {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    ul.nav__list {
+        gap: 16px;
+    }
+
+    section.navcontact {
+        gap: 16px;
+    }
+
+    section.navleft {
+        gap: 16px;
+    }
+
+    a.nav__link {
+        font-size: 16px;
+    }
+
+    a.navcontact__btn {
+        font-size: 16px;
+    }
+
+  
+}
+
+
+
